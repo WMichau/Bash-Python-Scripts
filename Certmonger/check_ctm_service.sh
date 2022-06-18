@@ -13,7 +13,7 @@ systemctl status certmonger.service | grep Active | awk '{n = 3; for (--n; n >= 
 if [[ $dtSec -lt $taSec ]]
 then
 	echo "Service restart"
-	#systemctl restart certmonger.service
+	systemctl restart certmonger.service
 fi
 while read -r line
 do
