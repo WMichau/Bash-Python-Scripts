@@ -20,8 +20,7 @@ do
 	if [[ $line == "MONITORING" ]]
 	then
 		echo "OK"
-	elif [[ $line == "NEED_CSR" ]]
-	then
+	else
 		sudo -S ipa-getcert list | grep -i NEED_CSR -A 3 -B 1
 	fi
 done <<<$(sudo -S ipa-getcert list | grep -i status | awk '{print $NF}')
