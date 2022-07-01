@@ -48,7 +48,7 @@ def main():
 
 
 def GitPullAction():
-    os.system("cd ~/chef/chef-repo && git pull")
+    os.system("cd ~/chef/chef-repo && git pull --rebase")
 
 def ChangeChefServer():    
     
